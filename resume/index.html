@@ -8,22 +8,27 @@
 
   <style>
     body { margin: 0; }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 12px; }
-    .pdf {
-      width: 100%;
-      height: 96vh;
-      border: 1px solid #eee;
-      border-radius: 12px;
-      display: block;
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 12px;
     }
 
-    /* Top-right download button */
-    .dl {
-      position: fixed;
-      top: 14px;
-      right: 14px;
-      z-index: 9999;
+    /* Sticky toolbar that stays within the wrapper */
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
 
+      display: flex;
+      justify-content: flex-end;
+
+      padding: 12px 0;
+      background: #fff;
+    }
+
+    .dl {
       display: inline-flex;
       align-items: center;
       gap: 8px;
@@ -43,24 +48,30 @@
     .dl:hover { border-color: #bbb; }
     .dl:active { transform: translateY(1px); }
 
-    .icon {
-      width: 18px;
-      height: 18px;
-      display: inline-block;
+    .icon { width: 18px; height: 18px; display: inline-block; }
+
+    .pdf {
+      width: 100%;
+      height: calc(100vh - 84px); /* room for toolbar */
+      border: 1px solid #eee;
+      border-radius: 12px;
+      display: block;
     }
   </style>
 </head>
 
 <body>
-  <a class="dl"
-     href="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf"
-     download
-     aria-label="Download PDF">
-    <img class="icon" src="./icons/download.svg" alt="" />
-    <span>Download</span>
-  </a>
-
   <div class="wrap">
+    <div class="toolbar">
+      <a class="dl"
+         href="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf"
+         download
+         aria-label="Download PDF">
+        <img class="icon" src="./icons/download.svg" alt="" />
+        <span>Download</span>
+      </a>
+    </div>
+
     <iframe
       class="pdf"
       src="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf#view=FitH"
