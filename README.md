@@ -2,6 +2,12 @@
 
 **Product & Program Manager | Data-driven execution | Cross-functional leadership | Customer outcomes**
 
+*Product & Program Manager · Data-driven execution · Cross-functional leadership · Customer outcomes*
+
+Product & Program Manager · Data-driven execution · Cross-functional leadership · Customer outcomes
+
+Product & Program Manager | Data-driven execution | Cross-functional leadership | Customer outcomes
+
 I build products and programs that make complex systems work better—for customers, for teams, and for the business.
 
 My background spans product management and technical program management across cloud, SaaS, healthcare, and commerce. I’m drawn to high-impact, cross-functional problems where the path isn’t obvious—adoption gaps, operational friction, scaling challenges, and launches that need sharper execution. I enjoy turning ambiguity into clarity: aligning stakeholders, defining the right metrics, and driving execution from idea to rollout.
