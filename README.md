@@ -1,12 +1,6 @@
 # Rishbha Godara
 
-**Product & Program Manager | Data-driven execution | Cross-functional leadership | Customer outcomes**
-
-*Product & Program Manager · Data-driven execution · Cross-functional leadership · Customer outcomes*
-
 Product & Program Manager · Data-driven execution · Cross-functional leadership · Customer outcomes
-
-Product & Program Manager | Data-driven execution | Cross-functional leadership | Customer outcomes
 
 I build products and programs that make complex systems work better—for customers, for teams, and for the business.
 
