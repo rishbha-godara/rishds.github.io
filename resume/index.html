@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume</title>
+  <meta name="description" content="Resume PDF" />
+
+  <style>
+    body { margin: 0; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 12px; }
+    .pdf {
+      width: 100%;
+      height: 96vh;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* Top-right download button */
+    .dl {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 9999;
+
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      background: #fff;
+
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #111;
+      text-decoration: none;
+
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    .dl:hover { border-color: #bbb; }
+    .dl:active { transform: translateY(1px); }
+
+    .icon {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <a class="dl"
+     href="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf"
+     download
+     aria-label="Download PDF">
+    <img class="icon" src="./icons/download.svg" alt="" />
+    <span>Download</span>
+  </a>
+
+  <div class="wrap">
+    <iframe
+      class="pdf"
+      src="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf#view=FitH"
+      title="Resume PDF"
+    ></iframe>
+  </div>
+</body>
+</html>
