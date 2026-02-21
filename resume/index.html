@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Resume</title>
-  <meta name="description" content="Resume PDF" />
+  <title>Rishbha Godara — Resume</title>
+  <meta name="description" content="Rishbha Godara — Technical Program Manager resume." />
 
   <style>
-    body { margin: 0; }
+    :root { --max: 1100px; }
+
+    body { margin: 0; background: #fff; }
 
     .wrap {
-      max-width: 1100px;
+      max-width: var(--max);
       margin: 0 auto;
-      padding: 12px;
+      padding: 14px 12px 12px;
     }
 
     /* Sticky header within wrapper */
@@ -21,51 +23,86 @@
       top: 0;
       z-index: 10;
 
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
 
-      padding: 12px 0;
+      padding: 14px 0;
       background: #fff;
     }
 
-    .title {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: #111;
+    /* Center block */
+    .headline {
+      grid-column: 2;
+      justify-self: center;
+      text-align: center;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: #0f172a;
+      line-height: 1.1;
+    }
+
+    .name {
       margin: 0;
+      font-size: clamp(26px, 2.2vw + 12px, 40px);
+      font-weight: 750;
+      letter-spacing: -0.02em;
+    }
+
+    .role {
+      margin: 6px 0 0 0;
+      font-size: clamp(14px, 0.8vw + 10px, 18px);
+      font-weight: 600;
+      color: #334155;
+    }
+
+    /* Right aligned button */
+    .actions {
+      grid-column: 3;
+      justify-self: end;
     }
 
     .dl {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
 
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid #ddd;
+      padding: 10px 14px;
+      border-radius: 14px;
+      border: 1px solid #d9d9d9;
       background: #fff;
 
-      font-family: Arial, sans-serif;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
       font-size: 14px;
+      font-weight: 650;
       color: #111;
       text-decoration: none;
 
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+      white-space: nowrap;
     }
-    .dl:hover { border-color: #bbb; }
+    .dl:hover { border-color: #bdbdbd; }
     .dl:active { transform: translateY(1px); }
 
     .icon { width: 18px; height: 18px; display: inline-block; }
 
     .pdf {
       width: 100%;
-      height: calc(100vh - 84px); /* room for sticky header */
+      height: calc(100vh - 120px); /* leaves room for the header */
       border: 1px solid #eee;
-      border-radius: 12px;
+      border-radius: 14px;
       display: block;
+    }
+
+    /* Small screens: keep it clean and readable */
+    @media (max-width: 560px) {
+      .toolbar {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+        row-gap: 10px;
+      }
+      .headline { grid-column: 1 / -1; grid-row: 1; }
+      .actions  { grid-column: 2; grid-row: 2; justify-self: end; }
+      .pdf { height: calc(100vh - 150px); }
     }
   </style>
 </head>
@@ -73,14 +110,19 @@
 <body>
   <div class="wrap">
     <div class="toolbar">
-      <h1 class="title">Technical Program Manager</h1>
+      <div class="headline" aria-label="Header">
+        <h1 class="name">Rishbha Godara</h1>
+        <div class="role">Technical Program Manager</div>
+      </div>
 
-      <a class="dl"
-         href="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf"
-         download
-         aria-label="Download PDF">
-        <img class="icon" src="./icons/download.svg" alt="" />
-      </a>
+      <div class="actions">
+        <a class="dl"
+           href="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf"
+           download
+           aria-label="Download PDF">
+          <img class="icon" src="./icons/download.svg" alt="" />
+        </a>
+      </div>
     </div>
 
     <iframe
