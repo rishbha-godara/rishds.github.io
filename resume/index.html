@@ -15,17 +15,27 @@
       padding: 12px;
     }
 
-    /* Sticky toolbar that stays within the wrapper */
+    /* Sticky header within wrapper */
     .toolbar {
       position: sticky;
       top: 0;
       z-index: 10;
 
       display: flex;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
 
       padding: 12px 0;
       background: #fff;
+    }
+
+    .title {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #111;
+      margin: 0;
     }
 
     .dl {
@@ -52,7 +62,7 @@
 
     .pdf {
       width: 100%;
-      height: calc(100vh - 84px); /* room for toolbar */
+      height: calc(100vh - 84px); /* room for sticky header */
       border: 1px solid #eee;
       border-radius: 12px;
       display: block;
@@ -63,6 +73,8 @@
 <body>
   <div class="wrap">
     <div class="toolbar">
+      <h1 class="title">Technical Program Manager</h1>
+
       <a class="dl"
          href="./RishbhaGodara-TPMS-MBA-2025_Resume-MSFT.pdf"
          download
